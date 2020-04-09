@@ -1,0 +1,14 @@
+
+Unnormalized tensors:
+---------------------
+
+P: PREF_tensor: 			[MxMxE]
+
+
+Normalized tensors:
+-------------------
+
+S: PROB_tensor: 			[MxMxE]
+R: PROB_ranking_matrix:		[MxE]
+C: PROB_group_matrix:		[MxM]
+r: PROB_groupranking_vector:	[M]
