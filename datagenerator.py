@@ -180,3 +180,23 @@ def get_PREF_tensor_footballP2(eta):
                            [0.95, 0.95, 0.42, 0.5]])
     
     return PREF_tensor, labels
+
+def get_PREF_tensor_footballP3(i,j,epsilon=0.001):
+    labels = ['Tunisia','Malta','Brazil','Argentina']
+    
+    PREF_tensor = np.zeros((4,4,2))
+    
+    PREF_tensor[:,:,0]= np.array([[0.5, 0.6, 0.3, 0.1], 
+                           [0.4, 0.5, 0.25, 0.05], 
+                           [0.7, 0.75, 0.5, 0.55], 
+                           [0.9, 0.95, 0.45, 0.5]])
+    
+    PREF_tensor[:,:,1]= np.array([[0.5, 0.55, 0.25, 0.05], 
+                           [0.45, 0.5, 0.25, 0.05], 
+                           [0.75, 0.75, 0.5, 0.58], 
+                           [0.95, 0.95, 0.42, 0.5]])
+    
+    PREF_tensor[i,j,0] = PREF_tensor[i,j,0] + epsilon
+    PREF_tensor[j,i,0] = PREF_tensor[j,i,0] - epsilon
+    
+    return PREF_tensor, labels
