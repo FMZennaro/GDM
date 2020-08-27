@@ -1,6 +1,6 @@
 
 # AGGREGATION LIBRARY
-# [MxMxE] -> [MxE]
+# [MxMxE] -> [MxM]
 # [MxE] -> [M]
 
 
